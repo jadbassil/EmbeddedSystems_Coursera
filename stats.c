@@ -36,35 +36,66 @@ void main() {
 
   /* Other Variable Declarations Go Here */
   /* Statistics and Printing Functions Go Here */
+  sort_array(test,SIZE);
   print_array(test, SIZE);
-
+  print_statistics(test, SIZE);
+ 
 }
 
 /* Add other Implementation File Code Here */
 void print_array(unsigned char *data, int length) {
+  int i;
 
+  printf("Array: ");
+  for(int i=0; i<length; i++) {
+    printf("%u ", data[i]);
+  }
+  printf("\n");
 }
 
 void print_statistics(unsigned char *data, int length) {
-
+  printf("Statistics: \n");
+  printf("\tMedian %u\n", find_median(data, length));
+  printf("\tMean %u\n", find_mean(data, length));
+  printf("\tMaximum %u\n", find_maximum(data, length));
+  printf("\tMinimum %u\n", find_minimum(data, length));
 }
 
 unsigned char find_median(unsigned char *data, int length) {
-  return NULL;
+  if(length %2 == 0) {
+    return (data[(length-1)/2] + data[(length+1)/2]) / 2;
+  } else {
+    return data[length/2];
+  }
 }
 
 unsigned char find_mean(unsigned char *data, int length) {
-  return NULL;
+  unsigned int sum = 0;
+  int i;
+  for(i=0; i<length; i++) {
+    sum += (unsigned int) data[i];
+  }
+  sum /= length;
+  return (unsigned char) sum;
 }
 
 unsigned char find_maximum(unsigned char *data, int length) {
-  return NULL;
+  return data[0];
 }
 
 unsigned char find_minimum(unsigned char *data, int length) {
-  return NULL;
+  return data[length-1];
 }
 
 void sort_array(unsigned char *data, int length) {
-
+  int i, j;
+  for(int i=1; i < length ; i++) {
+    for(int j = 0; j < i; j++) {
+      if(data[i] > data[j]) {
+        int tmp = data[i];
+        data[i] = data[j];
+        data[j] = tmp;
+      }
+    }
+  }
 }
