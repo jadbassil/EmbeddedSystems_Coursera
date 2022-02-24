@@ -63,7 +63,7 @@ void print_statistics(unsigned char *data, int length) {
 
 unsigned char find_median(unsigned char *data, int length) {
   if(length %2 == 0) {
-    return (data[(length-1)/2] + data[(length+1)/2]) / 2;
+    return (data[(length-1)/2] + data[(length)/2]) / 2;
   } else {
     return data[length/2];
   }
