@@ -28,7 +28,7 @@
 /**
  * @brief Given an array of data and a length, prints the array to the screen
  *
- * This function takes as input a pointer to an unsigned char array and its size to print the
+ * This function takes as input a pointer to an unsigned char array and its length to print the
  * content of the array on the screen.
  *
  * @param data Pointer to the array
@@ -36,7 +36,7 @@
  *
  * @return void
  */
-void print_array(unsigned char *data, int size);
+void print_array(unsigned char *data, int length);
 
 /**
  * @brief  A function that prints the statistics of an array including minimum, maximum, mean, and
@@ -49,7 +49,7 @@ void print_array(unsigned char *data, int size);
  *
  * @return void
  */
-void print_statistics(unsigned char *data, int size);
+void print_statistics(unsigned char *data, int length);
 
 /**
  * @brief   Given an array of data and a length, returns the median value
@@ -61,7 +61,7 @@ void print_statistics(unsigned char *data, int size);
  *
  * @return The median value
  */
-unsigned char find_median(unsigned char *data, int size);
+unsigned char find_median(unsigned char *data, int length);
 
 /**
  * @brief   Given an array of data and a length, returns the mean value
@@ -73,7 +73,7 @@ unsigned char find_median(unsigned char *data, int size);
  *
  * @return The mean value
  */
-unsigned char find_mean(unsigned char *data, int size);
+unsigned char find_mean(unsigned char *data, int length);
 
 /**
  * @brief   Given an array of data and a length, returns the maximum value
@@ -85,7 +85,7 @@ unsigned char find_mean(unsigned char *data, int size);
  *
  * @return The maximum value
  */
-unsigned char find_maximum(unsigned char *data, int size);
+unsigned char find_maximum(unsigned char *data, int length);
 
 /**
  * @brief   Given an array of data and a length, returns the minimum value
@@ -97,7 +97,7 @@ unsigned char find_maximum(unsigned char *data, int size);
  *
  * @return The minimum value
  */
-unsigned char find_minimum(unsigned char *data, int size);
+unsigned char find_minimum(unsigned char *data, int length);
 
 /**
  * @brief   Given an array of data and a length, sorts the array from largest to smallest
@@ -109,6 +109,6 @@ unsigned char find_minimum(unsigned char *data, int size);
  *
  * @return void
  */
-void sort_array(unsigned char *data, int size);
+void sort_array(unsigned char *data, int length);
 
 #endif /* __STATS_H__ */
